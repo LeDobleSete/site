@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se me atoro la tula en el cierre</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function openDocumentBasedOnInput() {
+      // Obtener el texto ingresado por el usuario
+      const userInput = document.getElementById('user-input').value.toLowerCase();
+
+      // Verificar texto ingresado y abrir el documento correspondiente
+      if (userInput.includes('proctor modificado')) {
+        window.open('proctores.html', '_blank');
+
+      } else if (userInput.includes('limite liquido')) {
+        window.open('limiteLP.html', '_blank');
+
+      } else if (userInput.includes('cono de arena')) {
+        window.open('conodearena.html', '_blank');
+
+      } else if (userInput.includes('granulometria')) {
+        window.open('granulometria.html', '_blank');
+
+      } else if (userInput.includes('cbr')) {
+        window.open('cbr.html', '_blank');
+
+      } else {
+        alert('Falta informacion acerca de su petición.');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Logo">
+      <h1>Control de Suelos.AI</h1>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="">Más Información</a>
+      <a href="Porygon.html">Porygon</a>
+    </nav>
+  </header>
+
+  <!-- Contenedor de Chat -->
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Asistente IA para control de suelos</h2>
+    </div>
+    <div class="chat-footer">
+      <!-- Entrada de texto y botón -->
+      <input type="text" id="user-input" placeholder="Dime cual es tu consulta..." />
+      <button id="send-button" onclick="openDocumentBasedOnInput()">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2024 Control de Suelos.AI.</p>
+    <p>
+      <a href="#privacidad">Política de Privacidad</a> | 
+      <a href="#terminos">Términos y Condiciones</a>
+    </p>
+  </footer>
+</body>
+</html>
